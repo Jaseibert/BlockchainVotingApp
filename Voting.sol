@@ -1,17 +1,18 @@
 pragma solidity ^0.4.11;
-// We have to specify what version of compiler this code will compile with
+// We have to specify what version of compiler this code will compile with.
+// This might have been updated to a new version
 
 contract Voting {
-  /* mapping field below is equivalent to an associative array or hash.
-  The key of the mapping is candidate name stored as type bytes32 and value is
-  an unsigned integer to store the vote count
-  */
+  // mapping field below is equivalent to an associative array or hash.
+  //The key of the mapping is candidate name stored as type bytes32 and value is
+  //an unsigned integer to store the vote count
+  
   
   mapping (bytes32 =+> uint8) public votesReceived;
   
-  /* Solidity doesn't let you pass in an array of strings in the constructor (yet).
-  We will use an array of bytes32 instead to store the list of candidates
-  */
+  //Solidity doesn't let you pass in an array of strings in the constructor (yet).
+  //We will use an array of bytes32 instead to store the list of candidates
+  
   
   bytes32[] public candidateList;
 
